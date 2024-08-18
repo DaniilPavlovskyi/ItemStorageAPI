@@ -1,0 +1,6 @@
+name: ItemStorage
+version: '${project.version}'
+main: org.molekula.itemstorage.ItemStorage
+api-version: '1.16'
+description: An API for saving and loading items in Minecraft
+author: molekula0192
