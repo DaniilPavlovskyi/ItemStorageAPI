@@ -34,7 +34,7 @@ public class ItemStorageImpl implements ItemStorageAPI {
 
     @Override
     public ItemStack loadItem(String key) {
-        String serializedItem = itemsConfig.getString("items." + key);
+        String serializedItem = itemsConfig.getString("saved-items." + key);
         return Utils.stringToItemStack(serializedItem);
     }
 
