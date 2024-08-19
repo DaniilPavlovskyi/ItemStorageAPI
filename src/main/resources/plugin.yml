@@ -1,6 +1,6 @@
 name: ItemStorage
 version: '${project.version}'
-main: org.molekula.itemstorage.ItemStorage
+main: org.molekula.itemstorage.ItemStoragePlugin
 api-version: '1.16'
 description: An API for saving and loading items in Minecraft
 author: molekula0192
