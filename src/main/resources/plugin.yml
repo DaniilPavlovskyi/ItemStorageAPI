@@ -6,12 +6,12 @@ description: An API for saving and loading items in Minecraft
 author: molekula0192
 commands:
   loaditem:
-    description: "Загрузить предмет"
-    usage: /<command> <имя предмета>
-    permission: is.saveitem
+    description: "Load item by name"
+    usage: /<command> <key>
+    permission: is.loaditem
     permission-message: ""
-  raidtime:
-    description: "Проверка КД на рейд"
-    usage: /<command> <имя предмета>
-    permission: is.raidstart
+  saveitem:
+    description: "Save item"
+    usage: /<command> <key>
+    permission: is.saveitem
     permission-message: ""
