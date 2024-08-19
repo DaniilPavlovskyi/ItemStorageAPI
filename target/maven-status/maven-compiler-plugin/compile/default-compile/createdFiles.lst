@@ -1,3 +1,6 @@
-org\molekula\itemstorage\utils\Utils.class
+org\molekula\itemstorage\ItemStoragePlugin.class
+org\molekula\itemstorage\commands\LoadItemCommand.class
 org\molekula\itemstorage\interfaces\ItemStorageAPI.class
-org\molekula\itemstorage\ItemStorage.class
+org\molekula\itemstorage\interfaces\ItemStorageImpl.class
+org\molekula\itemstorage\utils\Utils.class
+org\molekula\itemstorage\commands\SaveItemCommand.class
