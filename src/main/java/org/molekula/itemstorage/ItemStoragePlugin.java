@@ -9,9 +9,12 @@ import org.molekula.itemstorage.interfaces.ItemStorageImpl;
 
 public class ItemStoragePlugin extends JavaPlugin {
 
+    private static ItemStorageAPI itemStorageAPI;
+
     @Override
     public void onEnable() {
-        ItemStorageAPI itemStorageAPI = new ItemStorageImpl(getDataFolder());
+        itemStorageAPI = new ItemStorageImpl(getDataFolder());
+
         getServer().getServicesManager().register(ItemStorageAPI.class, itemStorageAPI, this, ServicePriority.Normal);
 
         getLogger().info("ItemStoragePlugin enabled!");
@@ -21,7 +24,9 @@ public class ItemStoragePlugin extends JavaPlugin {
     }
 
     public static ItemStorageAPI getAPI() {
-        return JavaPlugin.getPlugin(ItemStoragePlugin.class).getServer()
-                .getServicesManager().getRegistration(ItemStorageAPI.class).getProvider();
+        if (itemStorageAPI == null) {
+            throw new IllegalStateException("ItemStorageAPI is not available.");
+        }
+        return itemStorageAPI;
     }
 }
